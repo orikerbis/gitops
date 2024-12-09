@@ -5,10 +5,10 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  sources:
-    - path: helm-webapp
-      repoURL: https://github.com/orikerbis/argo-examples
+  source:
+    - repoURL: https://github.com/orikerbis/argo-examples
       targetRevision: master
+      path: helm-webapp
       helm:
         valuesFiles:
           - $values/gitops-chart/values.yaml
