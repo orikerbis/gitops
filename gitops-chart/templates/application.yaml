@@ -12,7 +12,7 @@ spec:
       helm:
         valuesFiles:
           - $values/gitops-chart/values.yaml
-      repoURL: https://github.com/orikerbis/gitops
+    - repoURL: https://github.com/orikerbis/gitops
       targetRevision: main
       ref: values
   destination:
