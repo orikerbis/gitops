@@ -15,8 +15,7 @@ spec:
     repoURL: https://github.com/orikerbis/gitops
     targetRevision: main
     path: gitops-chart
-    helm:
-      ref: values
+    ref: values
   destination:
     server: https://kubernetes.default.svc
     namespace: my-namespace
