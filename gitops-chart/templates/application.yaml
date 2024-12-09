@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   sources:
-    - repoURL: https://github.com/orikerbis/argo-examples
+    - path: helm-webapp
+      repoURL: https://github.com/orikerbis/argo-examples
       targetRevision: master
-      path: helm-webapp
       helm:
         valuesFiles:
           - $values/gitops-chart/values.yaml
