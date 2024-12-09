@@ -1,20 +1,23 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-application
+  name: my-application-2
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: {{ .Values.source.repoURL }}
-    targetRevision: {{ .Values.source.targetRevision }}
-    path: {{ .Values.source.path }}
-  destination: {{ .Values.destination }}
-    server: 
-    namespace: {{ .Values.namespace }}
+    repoURL: https://github.com/orikerbis/argo-examples
+    targetRevision: master
+    path: helm-webapp
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: my-app-namespace
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
-    - CreateNamespace=true
+      - CreateNamespace=true

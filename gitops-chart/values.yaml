@@ -1,8 +1,10 @@
-source:
-    repoURL: https://github.com/orikerbis/argo-examples
-    targetRevision: main
-    path: helm-webapp
-    
-destination:
-    server: https://kubernetes.default.svc
-    namespace: my-namespace
+
+
+configmap:
+  name: myhelmapp-configmap-v1
+  data:
+    CUSTOM_HEADER: 'This app was deployed with helm!'
+
+image:
+  name: devopsjourney1/mywebapp
+  tag: latest
