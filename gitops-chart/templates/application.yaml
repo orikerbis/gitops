@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
+  sources:
     - repoURL: https://github.com/orikerbis/argo-examples
       targetRevision: master
       path: helm-webapp
