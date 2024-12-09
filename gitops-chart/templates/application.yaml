@@ -10,8 +10,13 @@ spec:
     targetRevision: master
     path: helm-webapp
     helm:
-      valueFiles:
-        - values.yaml
+      valuesFiles:
+        - $values/
+    repoURL: https://github.com/orikerbis/gitops
+    targetRevision: main
+    path: gitops-chart
+    helm:
+      ref: values
   destination:
     server: https://kubernetes.default.svc
     namespace: my-app-namespace
