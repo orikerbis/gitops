@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/orikerbis/argo-examples
-    targetRevision: main
-    path: helm-webapp
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: my-namespace
+    repoURL: {{ .Values.source.repoURL }}
+    targetRevision: {{ .Values.source.targetRevision }}
+    path: {{ .Values.source.path }}
+  destination: {{ .Values.destination }}
+    server: 
+    namespace: {{ .Values.namespace }}
   syncPolicy:
     automated:
       prune: true
