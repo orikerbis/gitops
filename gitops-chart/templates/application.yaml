@@ -10,7 +10,7 @@ spec:
       targetRevision: master
       path: helm-webapp
       helm:
-        valuesFiles:
+        valueFiles:
           - $values/gitops-chart/values.yaml
     - repoURL: https://github.com/orikerbis/gitops
       targetRevision: main
