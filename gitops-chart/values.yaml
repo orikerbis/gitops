@@ -8,4 +8,4 @@ configmap:
 image:
   name: devopsjourney1/mywebapp
   tag: latest
-replicaCount: 4
+replicas: 4
